@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-commerce Store</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+<header>
+    <h1>ROYCE Drip Merch</h1>
+    <button id="cart-button">View Cart (0)</button>
+</header>
+
+<div class="container" id="product-list">
+    <!-- Products will be injected here by JavaScript -->
+</div>
+
+<div class="cart-container" id="cart-container" style="display: none;">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total-price">0.00</span></p>
+    <button id="checkout-button">Checkout</button>
+    <button id="close-cart-button">Close</button>
+</div>
+
+<footer>
+    <p>&copy; ROYCE E-COMMERCE STORE 2024</p>
+</footer>
+
+<script>
+    const products = [
+        {
+            name: "Cactus Jack T-Shirt",
+            price: 49.99,
+            image: "C:\\Users\\munya\\Desktop\\java\\Merch\\cactus Jack.jpg"
+        },
+        {
+            name: "Travis Scott T-Shirt",
+            price: 39.99,
+            image: "C:\\Users\\munya\\Desktop\\java\\Merch\\Travis scott.jpg"
+        },
+        {
+            name: "OFF-White Sweater",
+            price: 69.99,
+            image: "C:\\Users\\munya\\Desktop\\java\\Merch\\Off white Sweater.jpg"
+        },
+        {
+            name: "Givenchy Sweater",
+            price: 59.99,
+            image: "C:\\Users\\munya\\Desktop\\java\\Merch\\Givenchy Sweater.jpg"
+        },
+        {
+            name: "Spongebob bottle",
+            price: 3.99,
+            image: "C:\\Users\\munya\\Desktop\\java\\Merch\\Spongebob bottle.jpg"
+        },
+        {
+            name: "Rick n morty Bottle",
+            price: 4.99,
+            image: "C:\\Users\\munya\\Desktop\\java\\Merch\\Rick n morty Bottle.jpg"
+        },
+        {
+            name: "Travis Scott phone case",
+            price: 5.99,
+            image: "C:\\Users\\munya\\Desktop\\java\\Merch\\Travis Scott phone case.jpg"
+        },
+        {
+            name: "Tupac phone case",
+            price: 5.99,
+            image: "C:\\Users\\munya\\Desktop\\java\\Merch\\Tupac phone case.jpg"
+        },
+    ];
+
+    let cart = [];
+    const productList = document.getElementById('product-list');
+    const cartButton = document.getElementById('cart-button');
+    const cartContainer = document.getElementById('cart-container');
+    const cartItemsList = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.className = 'product';
+        productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>Price: $${product.price.toFixed(2)}</p>
+            <input type="number" id="qty-${product.name.replace(/\s/g, '-')}" value="1" min="1" style="width: 50px;">
+            <button onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+        `;
+        productList.appendChild(productDiv);
+    });
+
+    function addToCart(productName, price) {
+        const qtyInput = document.getElementById(`qty-${productName.replace(/\s/g, '-')}`);
+        const quantity = parseInt(qtyInput.value);
+        
+        const existingProduct = cart.find(item => item.productName === productName);
+        if (existingProduct) {
+            existingProduct.quantity += quantity;
+        } else {
+            cart.push({ productName, price, quantity });
+        }
+        
+        updateCart();
+        alert(`${productName} (x${quantity}) has been added to your cart.`);
+    }
+
+    function updateCart() {
+        const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+        cartButton.innerText = `View Cart (${cartCount})`;
+        
+        // Update cart display
+        cartItemsList.innerHTML = '';
+        let total = 0;
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.productName} - $${item.price.toFixed(2)} x ${item.quantity}`;
+            cartItemsList.appendChild(li);
+            total += item.price * item.quantity;
+        });
+        totalPriceElement.textContent = total.toFixed(2);
+    }
+
+    cartButton.onclick = () => {
+        cartContainer.style.display = 'block';
+    };
+
+    document.getElementById('close-cart-button').onclick = () => {
+        cartContainer.style.display = 'none';
+    };
+
+    document.getElementById('checkout-button').onclick = () => {
+        alert('Checkout successful! Your total is $' + totalPriceElement.textContent);
+        cart = [];
+        updateCart();
+        cartContainer.style.display = 'none';
+    };
+</script>
+
+</body>
+</html>
