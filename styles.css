@@ -1,35 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: black;
+    color: #fff;
     padding: 20px;
-    background-color: #000000;
+    text-align: center;
+    position: relative;
 }
-
-header img {
-    max-width: 700px;
-    max-height: 700px;
-    align-self:center;
-
-}
-
-nav {
-    margin-left: auto;
-}
-
-.nav-links {
+.nav-links{
+    display: flex;
     list-style: none;
-    padding: 0;
-    display: flex; /* Use flexbox for horizontal layout */
-    margin: 0; /* Remove default margin */
 }
-
 .nav-links li {
     margin-right: 20px; /* Space between links */
 }
@@ -46,8 +32,7 @@ nav {
 h1 {
     margin: 0;
     text-align: center;
-    font-size: 36px;
-    color: #fff;
+    font-size: 36px; /* Font size for h1 in pixels */
 }
 
 h3 {
