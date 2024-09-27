@@ -122,7 +122,7 @@ name: "Rolex Green Emerald Iced out  Watch",
 
 price: 99.99,
 
-image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/blob/main/Merch/RolexGrEmrld.jpg"
+image: "Merch/RolexGrEmrld.jpg"
 },  
 ];
 
