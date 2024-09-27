@@ -68,7 +68,62 @@ price: 5.99,
 image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/raw/main/Merch/Tupac%20phone%20case.jpg"
 
 },
-    // Add the rest of your product data here
+{
+name: "4PF Ice Chain",
+
+price: 59.99,
+
+image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/blob/main/Merch/4pf.jpg"
+},
+{
+name: "Chrome Hearts Ice Chain ",
+
+price: 39.99,
+
+image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/blob/main/Merch/chromeHearts.jpg"
+},
+{
+name: "OTF Standard Ice Chain",
+
+price: 59.99,
+
+image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/blob/main/Merch/OTF.jpg"
+},
+{
+name: "OTF Deluxe Ice Chain",
+
+price: 59.99,
+
+image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/blob/main/Merch/OtfDelx.jpg"
+},
+{
+name: "YEAT! Balaclava",
+
+price: 9.99,
+
+image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/blob/main/Merch/balaclava.jpg"
+},
+{
+name: "Adumars Blue Ice watch",
+
+price: 19.99,
+
+image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/blob/main/Merch/Adumars.jpg"
+},
+{
+name: "Rolex Iced out Women's Watch",
+
+price: 89.99,
+
+image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/blob/main/Merch/RolexF.jpg"
+},
+{
+name: "Rolex Green Emerald Iced out  Watch",
+
+price: 99.99,
+
+image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/blob/main/Merch/RolexGrEmrld.jpg"
+},  
 ];
 
 let cart = [];
