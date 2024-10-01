@@ -209,3 +209,28 @@ document.getElementById('cart-items').addEventListener('click', (event) => {
 const centerCartButton = document.getElementById('cart-button');
 centerCartButton.style.display = 'block';
 centerCartButton.style.margin = '0 auto';
+
+document.getElementById('review-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const customerName = document.getElementById('customer-name').value;
+    const customerEmail = document.getElementById('customer-email').value || 'N/A';
+    const reviewText = document.getElementById('review-text').value;
+    const rating = document.getElementById('rating').value;
+
+    const reviewsList = document.getElementById('reviews-list');
+    const reviewDiv = document.createElement('div');
+    reviewDiv.className = 'review';
+    reviewDiv.innerHTML = `
+        <strong>${customerName} (${customerEmail})</strong>
+        <p>Rating: ${rating} Stars</p>
+        <p>${reviewText}</p>`;
+    
+    reviewsList.appendChild(reviewDiv);
+
+    // Clear the form inputs
+    document.getElementById('customer-name').value = '';
+    document.getElementById('customer-email').value = '';
+    document.getElementById('review-text').value = '';
+    document.getElementById('rating').selectedIndex = 0;
+});
