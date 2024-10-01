@@ -5,39 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royce's Drip Merch E-store</title>
-    <link rel="stylesheet" href="styles.css"> 
-    
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-
     <header>
-        <img src="Merch/logo2.jpg" alt="Logo">
+        <img src="C:\\Users\\munya\\Desktop\\java\\logo2.jpg" alt="Logo">
         <h1>ROYCE Drip Merch</h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="#cart-button">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="sales-blog.html">Sales Blog</a></li>
-                <li><a href="contact.html">Contact Us </a></li>
-               
+                <li><a href="contact.html">Contact Us Page</a></li>
+                <li><a href="#cart-button">Products</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="Firstpic">
-        <img src="Merch/drip.jpg" alt="Pic">
-        <img src="Merch/dripp.jpg" alt="Pic">
+        <img src="C:\\Users\\munya\\Desktop\\java\\drip.jpg" alt="Pic">
+        <img src="C:\\Users\\munya\\Desktop\\java\\dripp.jpg" alt="Pic">
     </div>
+
     <h3><u>PRODUCTS</u></h3>
     <div class="cartbtn">
         <button id="cart-button">View Cart (0)</button>
     </div>
-    
   
-    <div class="container" id="product-list">
-      
-    </div>
+    <div class="container" id="product-list"></div>
+
+    <section class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <form id="review-form">
+            <input type="text" id="customer-name" placeholder="Your Name" required>
+            <input type="email" id="customer-email" placeholder="Your Email (optional)">
+            <textarea id="review-text" placeholder="Write your review here..." required></textarea>
+            <label for="rating">Rate your experience:</label>
+            <select id="rating" required>
+                <option value="" disabled selected>Select a rating</option>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+            <button type="submit">Submit Review</button>
+        </form>
+        <div id="reviews-list"></div>
+    </section>
 
     <footer>
         <pre>Royce Drip Merch 2024 Contact us on:</pre>
@@ -59,10 +75,6 @@
     </div>
 
     <script src="script.js"></script> 
-</body>
-
-</html>
-
 </body>
 
 </html>
