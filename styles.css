@@ -202,3 +202,40 @@ footer{
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
 }
+.responsive-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.Firstpic {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.cart-container {
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .nav-links li {
+        display: block;
+        margin: 5px 0;
+    }
+
