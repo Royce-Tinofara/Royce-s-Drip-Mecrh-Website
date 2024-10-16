@@ -246,4 +246,12 @@ footer{
         display: block;
         margin: 5px 0;
     }
+.video-section {
+    text-align: center;
+    margin: 20px;
+}
 
+.responsive-video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; 
