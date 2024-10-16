@@ -234,3 +234,14 @@ document.getElementById('review-form').addEventListener('submit', function (e) {
     document.getElementById('review-text').value = '';
     document.getElementById('rating').selectedIndex = 0;
 });
+ // Start playing the audio when the page loads
+    window.onload = function() {
+        const audio = document.getElementById('background-audio');
+        audio.play();
+    }
+
+    // Optional: Provide a button to unmute
+    function unmuteAudio() {
+        const audio = document.getElementById('background-audio');
+        audio.muted = false; // Unmute the audio
+    }
