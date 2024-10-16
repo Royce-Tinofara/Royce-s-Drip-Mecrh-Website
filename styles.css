@@ -26,7 +26,7 @@ header {
     text-decoration: none;
     color: #33FF33; 
     font-weight: bold;
-    text-shadow: 0 0 5px #33FF33, 0 0 10px #33FF33, 0 0 15px #33FF33; 
+     
 }
 
 .nav-links a:hover {
@@ -134,7 +134,7 @@ button: hover {
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px; /* Adding border-radius for rounded corners */
+    border-radius: 10px; 
 }
 #cart-button {
     display: block;
