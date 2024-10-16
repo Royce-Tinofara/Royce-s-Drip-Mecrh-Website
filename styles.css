@@ -38,16 +38,15 @@ h1 {
     margin: 0;
     text-align: center;
     font-size: 36px; 
-    color: #FF33CC;
-    text-shadow: 0 0 10px #FF33CC, 0 0 20px #FF33CC; 
+    color: #007BFF; 
+    text-shadow: 0 0 10px #007BFF, 0 0 20px #007BFF; 
 }
 
 h3 {
     margin: 0;
     text-align: center;
     font-size: 50px; 
-    color: #FFCC00; 
-    text-shadow: 0 0 10px #FFCC00, 0 0 20px #FFCC00; 
+    color: #000000;
 }
 
 button {
