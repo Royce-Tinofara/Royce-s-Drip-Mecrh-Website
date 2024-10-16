@@ -12,33 +12,42 @@ header {
     text-align: center;
     position: relative;
 }
-.nav-links{
+
+.nav-links {
     display: flex;
     list-style: none;
 }
+
 .nav-links li {
-    margin-right: 20px; /* Space between links */
+    margin-right: 20px; 
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #33FF33; 
     font-weight: bold;
+    text-shadow: 0 0 5px #33FF33, 0 0 10px #33FF33, 0 0 15px #33FF33; 
 }
 
 .nav-links a:hover {
-    color: #007BFF; /* Change color on hover */
+    color: #007BFF; 
+    text-shadow: 0 0 10px #007BFF, 0 0 15px #007BFF;
 }
+
 h1 {
     margin: 0;
     text-align: center;
-    font-size: 36px; /* Font size for h1 in pixels */
+    font-size: 36px; 
+    color: #FF33CC;
+    text-shadow: 0 0 10px #FF33CC, 0 0 20px #FF33CC; 
 }
 
 h3 {
     margin: 0;
     text-align: center;
-    font-size: 50px; /* Font size for h3 in pixels */
+    font-size: 50px; 
+    color: #FFCC00; 
+    text-shadow: 0 0 10px #FFCC00, 0 0 20px #FFCC00; 
 }
 
 button {
@@ -51,7 +60,7 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+button: hover {
     background-color: #e64a19;
 }
 
