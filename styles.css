@@ -28,11 +28,14 @@ header {
     font-weight: bold;
      
 }
-
 .nav-links a:hover {
     color: #007BFF; 
     text-shadow: 0 0 10px #007BFF, 0 0 15px #007BFF;
 }
+.nav-links img {
+     width: 30px; 
+}
+
 
 h1 {
     margin: 0;
@@ -251,12 +254,4 @@ footer{
         display: block;
         margin: 5px 0;
     }
-.video-section {
-    text-align: center;
-    margin: 20px;
-}
 
-.responsive-video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; 
