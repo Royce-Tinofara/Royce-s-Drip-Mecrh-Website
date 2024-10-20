@@ -1,5 +1,10 @@
 const products = [
     {
+        name: "Badness Loaded",
+        price: 20.00,
+        image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/raw/main/Merch/badness.png"
+    },
+    {
         name: "Cactus Jack T-Shirt",
         price: 49.99,
         image: "https://github.com/Royce-Tinofara/Royce-s-Drip-Mecrh-Website/raw/main/Merch/cactus%20Jack.jpg"
